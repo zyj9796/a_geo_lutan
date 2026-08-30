@@ -1,0 +1,8 @@
+# Local inputs and generated products
+data/*
+!data/README.md
+results/
+
+# Python caches
+__pycache__/
+*.py[cod]
