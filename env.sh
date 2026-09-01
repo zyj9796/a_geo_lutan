@@ -1,16 +1,47 @@
 #!/usr/bin/env bash
 
-export SAR_GEOCODE_PROJECT_DIR=/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_lutan
-export SAR_GEOCODE_RSLC_DIR=/home/u/geocoding/geo_hangzhou/Lutan/RE_SLAVES
-export SAR_GEOCODE_BUILDINGS_SHP=/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_huajiachi/data/shp/huajiachi_clip.shp
-export SAR_GEOCODE_DSM_TIF=/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_huajiachi/data/hangzhou_dsm_1m.tif
-export SAR_GEOCODE_DSM_SAR_EXTENT_TIF=/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_lutan/data/lutan_dsm_sar_extent.tif
-export SAR_GEOCODE_AREA_LABEL="LuTan-1 Huajiachi"
-export SAR_GEOCODE_DATE=20250124
-export SAR_GEOCODE_DEFORMATION_POINTS_CSV=/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_lutan/results/tables/full_area/20250124_all_buildings_method_vs_gamma_with_lutan_deformation.csv
-export SAR_GEOCODE_FIGURE_PREFIX=lutan
-export PROJ_LIB=/home/u/miniconda3/envs/sar-geocode/share/proj
-export PROJ_DATA=/home/u/miniconda3/envs/sar-geocode/share/proj
-export MAX_PLOT_GEOTIFF_PIXELS=3000000
-export MPLCONFIGDIR=/tmp/matplotlib
-export XDG_CACHE_HOME=/tmp
+LUTAN_PROJECT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+LUTAN_PARENT_DIR="$(cd -- "$LUTAN_PROJECT_DIR/.." && pwd)"
+
+# Prefer the vendored standalone layout published on GitHub. The fallback keeps
+# compatibility with the original monorepo workspace.
+if [[ -d "$LUTAN_PROJECT_DIR/src" && -d "$LUTAN_PROJECT_DIR/code/shared" ]]; then
+  LUTAN_DEFAULT_REPO_ROOT="$LUTAN_PROJECT_DIR"
+  LUTAN_DEFAULT_SHARED_CODE="$LUTAN_PROJECT_DIR/code/shared"
+  LUTAN_DEFAULT_BUILDINGS="$LUTAN_PROJECT_DIR/data/buildings/huajiachi_clip.shp"
+else
+  LUTAN_DEFAULT_REPO_ROOT="$LUTAN_PARENT_DIR"
+  LUTAN_DEFAULT_SHARED_CODE="$LUTAN_PARENT_DIR/a_geo_huajiachi/code"
+  LUTAN_DEFAULT_BUILDINGS="$LUTAN_PARENT_DIR/a_geo_huajiachi/data/shp/huajiachi_clip.shp"
+fi
+
+if [[ -d "$LUTAN_PROJECT_DIR/../../Lutan/RE_SLAVES" ]]; then
+  LUTAN_DEFAULT_INPUT_ROOT="$(cd -- "$LUTAN_PROJECT_DIR/../../Lutan" && pwd)"
+else
+  LUTAN_DEFAULT_INPUT_ROOT="$LUTAN_PARENT_DIR/Lutan"
+fi
+
+export SAR_GEOCODE_PROJECT_DIR="${SAR_GEOCODE_PROJECT_DIR:-$LUTAN_PROJECT_DIR}"
+export SAR_GEOCODE_REPO_ROOT="${SAR_GEOCODE_REPO_ROOT:-$LUTAN_DEFAULT_REPO_ROOT}"
+export SAR_GEOCODE_SHARED_CODE_DIR="${SAR_GEOCODE_SHARED_CODE_DIR:-$LUTAN_DEFAULT_SHARED_CODE}"
+export SAR_GEOCODE_RSLC_DIR="${SAR_GEOCODE_RSLC_DIR:-$LUTAN_DEFAULT_INPUT_ROOT/RE_SLAVES}"
+export SAR_GEOCODE_DEFORMATION_MAT="${SAR_GEOCODE_DEFORMATION_MAT:-$LUTAN_DEFAULT_INPUT_ROOT/defo_ssa.mat}"
+export SAR_GEOCODE_BUILDINGS_SHP="${SAR_GEOCODE_BUILDINGS_SHP:-$LUTAN_DEFAULT_BUILDINGS}"
+export SAR_GEOCODE_DSM_TIF="${SAR_GEOCODE_DSM_TIF:-$LUTAN_PROJECT_DIR/data/lutan_dsm_sar_extent.tif}"
+export SAR_GEOCODE_DSM_SAR_EXTENT_TIF="${SAR_GEOCODE_DSM_SAR_EXTENT_TIF:-$LUTAN_PROJECT_DIR/data/lutan_dsm_sar_extent.tif}"
+export SAR_GEOCODE_AREA_LABEL="${SAR_GEOCODE_AREA_LABEL:-LuTan-1 Huajiachi}"
+export SAR_GEOCODE_DATE="${SAR_GEOCODE_DATE:-20250124}"
+export SAR_GEOCODE_DEFORMATION_POINTS_CSV="${SAR_GEOCODE_DEFORMATION_POINTS_CSV:-$LUTAN_PROJECT_DIR/results/tables/full_area/${SAR_GEOCODE_DATE}_all_buildings_method_vs_gamma_with_lutan_deformation.csv}"
+export SAR_GEOCODE_FIGURE_PREFIX="${SAR_GEOCODE_FIGURE_PREFIX:-lutan}"
+export SAR_GEOCODE_PYTHON="${SAR_GEOCODE_PYTHON:-/home/u/miniconda3/envs/sar-geocode/bin/python}"
+if [[ ! -x "$SAR_GEOCODE_PYTHON" ]]; then
+  SAR_GEOCODE_PYTHON="$(command -v python3)"
+  export SAR_GEOCODE_PYTHON
+fi
+
+SAR_GEOCODE_PYTHON_PREFIX="$(cd -- "$(dirname -- "$SAR_GEOCODE_PYTHON")/.." && pwd)"
+export PROJ_LIB="${PROJ_LIB:-$SAR_GEOCODE_PYTHON_PREFIX/share/proj}"
+export PROJ_DATA="${PROJ_DATA:-$PROJ_LIB}"
+export MAX_PLOT_GEOTIFF_PIXELS="${MAX_PLOT_GEOTIFF_PIXELS:-3000000}"
+export MPLCONFIGDIR="${MPLCONFIGDIR:-/tmp/matplotlib}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/tmp}"

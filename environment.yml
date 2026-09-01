@@ -1,0 +1,11 @@
+name: sar-geocode
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=2.2
+  - scipy=1.15
+  - matplotlib=3.10
+  - gdal=3.11
+  - shapely=2.1
+  - octave=6.4

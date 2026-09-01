@@ -1,0 +1,17 @@
+{
+  "source_dsm": "/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_huajiachi/data/hangzhou_dsm_1m.tif",
+  "output_dsm": "/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_lutan/data/lutan_dsm_sar_extent.tif",
+  "sar_bounds_wgs84": [
+    120.16028709310172,
+    30.256534910425017,
+    120.19838959310171,
+    30.286287410425018
+  ],
+  "crop_bounds_native": [
+    226737.97616393783,
+    3350504.4880762943,
+    230546.96820959088,
+    3353954.500158478
+  ],
+  "margin_m": 30.0
+}

@@ -19,10 +19,15 @@ from matplotlib.patches import Polygon as MplPolygon
 from osgeo import ogr
 
 
-ROOT = Path(__file__).resolve().parents[1]
-DATE = "20250124"
+ROOT = Path(os.environ.get("SAR_GEOCODE_PROJECT_DIR", Path(__file__).resolve().parents[1])).resolve()
+DATE = os.environ.get("SAR_GEOCODE_DATE", "20250124")
 POINTS = ROOT / "results" / "tables" / "full_area" / f"{DATE}_all_buildings_method_vs_gamma_with_lutan_deformation.csv"
-BUILDINGS = Path("/home/u/geocoding/geo_hangzhou/geo_bc/a_geo_huajiachi/data/shp/huajiachi_clip.shp")
+BUILDINGS = Path(
+    os.environ.get(
+        "SAR_GEOCODE_BUILDINGS_SHP",
+        ROOT.parent / "a_geo_huajiachi" / "data" / "shp" / "huajiachi_clip.shp",
+    )
+).resolve()
 OUT_DIR = ROOT / "results" / "images" / "lutan_deformation"
 REFERENCE_DIR = ROOT / "results" / "images" / "full_area_geobc_ps" / "defo"
 PIC_DIR = ROOT / "results" / "pic_all" / "full_area_geobc_ps" / "defo"

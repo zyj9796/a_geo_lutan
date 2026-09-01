@@ -1,7 +1,19 @@
 # Local inputs and generated products
 data/*
 !data/README.md
-results/
+!data/lutan_dsm_sar_extent.json
+!data/lutan_dsm_sar_extent.tif
+!data/buildings/
+!data/buildings/*
+
+# Keep the complete generated workspace local, except for the final 35-figure
+# GitHub package and its reproducibility manifest.
+results/*
+!results/all_images/
+results/all_images/*
+!results/all_images/*.png
+!results/all_images/README.md
+!results/all_images/MANIFEST.json
 
 # Python caches
 __pycache__/

@@ -1,9 +1,22 @@
-# a_geo_lutan: LuTan-1 building-constrained SAR geocoding
+# a_geo_lutan：LuTan-1 建筑约束 SAR 精细地理编码
 
-This directory is an independent rerun workspace for the LuTan-1A/LuTan-1B
-Huajiachi dataset. It reuses the validated building footprint and DSM inputs from
-`a_geo_huajiachi`, but all generated tables, rasters, figures, logs, and summaries
-are written below this directory.
+本目录是 LuTan-1A/LuTan-1B 华家池数据的独立复现工程。最终 35 张核心结果图已汇总到
+[`results/all_images`](results/all_images/)，完整方法、输入、代码路径、逐阶段命令和图件对应
+关系见 [`REPRODUCE_ALL_IMAGES.md`](REPRODUCE_ALL_IMAGES.md)。
+
+## 快速复现
+
+准备 `20250124.rslc`、`20250124.rslc.par` 和 `defo_ssa.mat` 后执行：
+
+```bash
+cd a_geo_lutan
+mamba env create -f environment.yml
+conda activate sar-geocode
+export SAR_GEOCODE_PYTHON="$(command -v python)"
+bash reproduce_all_images.sh
+```
+
+脚本自动执行主流程、全区域、严格同像素形变连接、坐标/形变/三维制图，并校验 35 张图。
 
 ## Inputs
 
@@ -18,7 +31,10 @@ The LuTan RSLC files are GAMMA `FCOMPLEX` (big-endian interleaved float32),
 1,346,701 rows and 25 columns: one-based range-column/azimuth-row, longitude,
 latitude, height, followed by 20 displacement epochs.
 
-## Run
+默认输入位置可通过 `env.sh` 中列出的环境变量覆盖。原始 RSLC 和形变矩阵体积较大，不在
+Git 仓库中；建筑轮廓、裁剪 DSM、代码和最终图片包随仓库提供。
+
+## 分阶段运行
 
 ```bash
 cd /home/u/geocoding/geo_hangzhou/geo_bc/a_geo_lutan
@@ -64,3 +80,6 @@ Run `bash run_images.sh` to regenerate the complete LuTan image package:
 - 6 Geo-BC/LuTan coordinate maps;
 - 6 deformation-rate and cumulative-deformation maps;
 - 4 full-area, locator, hotspot, and interpolated-surface 3D figures.
+
+最终执行 `code/collect_all_images.py --check`，应报告 `checked_images=35`。每张图的来源、
+SHA-256、文件大小和像素尺寸见 `results/all_images/MANIFEST.json`。

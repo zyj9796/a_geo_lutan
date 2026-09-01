@@ -1,0 +1,320 @@
+{
+  "image_count": 35,
+  "images": [
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_01_huajiachi_sar_intensity_with_buildings.png",
+      "source": "results/images/main/fig_01_huajiachi_sar_intensity_with_buildings.png",
+      "sha256": "e4b9912805195c1d11eb6e097bba45cd157487ca17fa13bf5b918c50c72a2c37",
+      "bytes": 2012047,
+      "width_px": 2160,
+      "height_px": 1860
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_02_initial_projection_masks.png",
+      "source": "results/images/main/fig_02_initial_projection_masks.png",
+      "sha256": "983097eae6f8e0bc93ea464d0e94731515deffd2b2a3e3a65556ee8630230230",
+      "bytes": 1826562,
+      "width_px": 2460,
+      "height_px": 1860
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_03_refined_masks.png",
+      "source": "results/images/main/fig_03_refined_masks.png",
+      "sha256": "57e2aab3b39d4a38e27953cdf4299e75080e3d9e7e24fe53c858c207521f4980",
+      "bytes": 1840851,
+      "width_px": 2460,
+      "height_px": 1860
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_04_initial_vs_refined_masks.png",
+      "source": "results/images/main/fig_04_initial_vs_refined_masks.png",
+      "sha256": "debb9fe6aa7ec8d767f65fa094297feda404328884bef8ce46622fb6306b7d15",
+      "bytes": 1412494,
+      "width_px": 3300,
+      "height_px": 1560
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_05_method_geocoded_points.png",
+      "source": "results/images/main/fig_05_method_geocoded_points.png",
+      "sha256": "2fd76f7467e874b7707434aa4257866132313982483bae5f3f72645a0e952a84",
+      "bytes": 1670203,
+      "width_px": 2220,
+      "height_px": 1920
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_06_gamma_vs_proposed_map.png",
+      "source": "results/images/main/fig_06_gamma_vs_proposed_map.png",
+      "sha256": "8a2a385165d86df483ee02d303fc58bec9794c4d6901475b1ee3d96c2a9586d1",
+      "bytes": 1699241,
+      "width_px": 2220,
+      "height_px": 1920
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_07_error_statistics.png",
+      "source": "results/images/main/fig_07_error_statistics.png",
+      "sha256": "c0c1e42512656a6531af6e8f87e216c66e7529b8d52eb37cf162932bde2dd7e8",
+      "bytes": 147269,
+      "width_px": 3300,
+      "height_px": 1380
+    },
+    {
+      "group": "main",
+      "output": "results/all_images/main__fig_08_3d_scatter_points.png",
+      "source": "results/images/main/fig_08_3d_scatter_points.png",
+      "sha256": "7f494bdc941de321bef0fb2032179c780ed136d30c14dbc41071b5b855d32742",
+      "bytes": 566429,
+      "width_px": 2400,
+      "height_px": 1950
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__20250124_fig5_4_like_all_buildings_error_scatter.png",
+      "source": "results/images/full_area/20250124_fig5_4_like_all_buildings_error_scatter.png",
+      "sha256": "83426494bb10a5efd55f0da10ffa781dec12bd6641cb0a3d25dbdec1f9540518",
+      "bytes": 398287,
+      "width_px": 3150,
+      "height_px": 1320
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__20250124_fig5_4_like_all_buildings_map.png",
+      "source": "results/images/full_area/20250124_fig5_4_like_all_buildings_map.png",
+      "sha256": "ae0f3205fa9f70568ce88798938624cde1d59c1effc06ca54ec1c438d94356f3",
+      "bytes": 4286490,
+      "width_px": 2460,
+      "height_px": 2460
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__20250124_fig_full_area_error_statistics.png",
+      "source": "results/images/full_area/20250124_fig_full_area_error_statistics.png",
+      "sha256": "6b065be7ac1664d063e6127a2c8a5c14a2fe9e9fe8b32efd06e1a890683362d2",
+      "bytes": 326353,
+      "width_px": 4051,
+      "height_px": 1738
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__20250124_fig_full_area_gamma_vs_proposed.png",
+      "source": "results/images/full_area/20250124_fig_full_area_gamma_vs_proposed.png",
+      "sha256": "00ced8bf6056c74d5e1e07ff366e147dd4ec848f1b0c768d5df35be3414e0cd1",
+      "bytes": 3876939,
+      "width_px": 3008,
+      "height_px": 2583
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__20250124_fig_full_area_planar_method_vs_gamma.png",
+      "source": "results/images/full_area/20250124_fig_full_area_planar_method_vs_gamma.png",
+      "sha256": "077d545c066c76444d31e77fcc76e146076c1e32978b2526159ac986c73dbbe7",
+      "bytes": 3518907,
+      "width_px": 5400,
+      "height_px": 1860
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__fig_10_full_area_displacement_vector_field.png",
+      "source": "results/images/full_area/fig_10_full_area_displacement_vector_field.png",
+      "sha256": "0404b1168ad1830795d3ea1ebf3391b7bd402a13b6a9c7a31cac82d45fd9531f",
+      "bytes": 901268,
+      "width_px": 2940,
+      "height_px": 2400
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__fig_11_full_area_planar_difference_heatmap.png",
+      "source": "results/images/full_area/fig_11_full_area_planar_difference_heatmap.png",
+      "sha256": "91cb3341ea05b65e5506715176ba52daf8f38edd4e32f43c2e0e37aaf5508c0f",
+      "bytes": 973876,
+      "width_px": 2940,
+      "height_px": 2400
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__fig_12_typical_building_zoom_planar_comparison.png",
+      "source": "results/images/full_area/fig_12_typical_building_zoom_planar_comparison.png",
+      "sha256": "816fabd986f9529df86a986cd92c4ee09b3acb9fdd8ceb6601216741fd14812a",
+      "bytes": 586051,
+      "width_px": 4260,
+      "height_px": 2460
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__fig_13_ranked_boundary_error_improvement.png",
+      "source": "results/images/full_area/fig_13_ranked_boundary_error_improvement.png",
+      "sha256": "1c94dcb8fa6a25382b107946b6f59803419df9445fef11ef066678573fa464d6",
+      "bytes": 277867,
+      "width_px": 3180,
+      "height_px": 2760
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__fig_14_height_vs_boundary_error.png",
+      "source": "results/images/full_area/fig_14_height_vs_boundary_error.png",
+      "sha256": "c2a0fc280308a1df82bc26d536c8c71b0f7692eadf07293c73f0b5ccd8156dbe",
+      "bytes": 831745,
+      "width_px": 4080,
+      "height_px": 1860
+    },
+    {
+      "group": "full_area",
+      "output": "results/all_images/full_area__fig_15_boundary_error_cdf.png",
+      "source": "results/images/full_area/fig_15_boundary_error_cdf.png",
+      "sha256": "b6f275482e7d60ab97fdbaba5ab730695ab9788fb78d26461a4c55e560544f90",
+      "bytes": 136973,
+      "width_px": 2550,
+      "height_px": 1860
+    },
+    {
+      "group": "coordinates",
+      "output": "results/all_images/coordinates__fig_01_full_area_geobc_buildings.png",
+      "source": "results/images/full_area_geobc_ps/fig_01_full_area_geobc_buildings.png",
+      "sha256": "0bac39b5eb768ec9220fca6b12a84ab93d9c813d47d2fd62e49f217560a98a9c",
+      "bytes": 1845095,
+      "width_px": 2173,
+      "height_px": 2093
+    },
+    {
+      "group": "coordinates",
+      "output": "results/all_images/coordinates__fig_02_full_area_lutan_coordinates_buildings.png",
+      "source": "results/images/full_area_geobc_ps/fig_02_full_area_lutan_coordinates_buildings.png",
+      "sha256": "a41b84ab2413f6ee03650e0adc282f772f9d125c8cbee4f8eb08d5740796e16e",
+      "bytes": 2206875,
+      "width_px": 2173,
+      "height_px": 2093
+    },
+    {
+      "group": "coordinates",
+      "output": "results/all_images/coordinates__fig_03_full_area_geobc_vs_lutan_buildings.png",
+      "source": "results/images/full_area_geobc_ps/fig_03_full_area_geobc_vs_lutan_buildings.png",
+      "sha256": "1d3db79ce18ba6830e48a9b3057b741c7b254a8ed87e02babfa6b595b370e048",
+      "bytes": 2931100,
+      "width_px": 2173,
+      "height_px": 2093
+    },
+    {
+      "group": "coordinates",
+      "output": "results/all_images/coordinates__fig_04_full_area_geobc_sar_buildings.png",
+      "source": "results/images/full_area_geobc_ps/fig_04_full_area_geobc_sar_buildings.png",
+      "sha256": "7b56738a3dc27f66bbabe05fd15575d3842264859c56846cbe95b7c3a0d9284d",
+      "bytes": 3660056,
+      "width_px": 2173,
+      "height_px": 2093
+    },
+    {
+      "group": "coordinates",
+      "output": "results/all_images/coordinates__fig_05_full_area_lutan_coordinates_sar_buildings.png",
+      "source": "results/images/full_area_geobc_ps/fig_05_full_area_lutan_coordinates_sar_buildings.png",
+      "sha256": "33b1e35fb6bada43fb75f4e0088940e2830a453fb7e5d586b28540828cd1e921",
+      "bytes": 4106696,
+      "width_px": 2173,
+      "height_px": 2093
+    },
+    {
+      "group": "coordinates",
+      "output": "results/all_images/coordinates__fig_06_full_area_geobc_vs_lutan_sar_buildings.png",
+      "source": "results/images/full_area_geobc_ps/fig_06_full_area_geobc_vs_lutan_sar_buildings.png",
+      "sha256": "82752498d2db55570594a1ff9a2a359ddae4a82d29af8463c16cedfbddbc8a40",
+      "bytes": 4763518,
+      "width_px": 2182,
+      "height_px": 2093
+    },
+    {
+      "group": "deformation",
+      "output": "results/all_images/deformation__fig_07_full_area_geobc_deformation_rate_buildings.png",
+      "source": "results/images/full_area_geobc_ps/defo/fig_07_full_area_geobc_deformation_rate_buildings.png",
+      "sha256": "2c1478a75534bc578b27f1d07b07aee88900457fda55d004690bc6ca43e3d956",
+      "bytes": 1865008,
+      "width_px": 2404,
+      "height_px": 1764
+    },
+    {
+      "group": "deformation",
+      "output": "results/all_images/deformation__fig_08_full_area_lutan_deformation_rate_buildings.png",
+      "source": "results/images/full_area_geobc_ps/defo/fig_08_full_area_lutan_deformation_rate_buildings.png",
+      "sha256": "cc1bb7a93ec554507600d67470b1abdb83ed691ce2eca94984543d90b4054f46",
+      "bytes": 2300043,
+      "width_px": 2404,
+      "height_px": 1764
+    },
+    {
+      "group": "deformation",
+      "output": "results/all_images/deformation__fig_09_full_area_geobc_vs_lutan_deformation_rate_buildings.png",
+      "source": "results/images/full_area_geobc_ps/defo/fig_09_full_area_geobc_vs_lutan_deformation_rate_buildings.png",
+      "sha256": "36e4e99c995879046605000e83db4778acf4297540104e1c53211c6bd5a32abb",
+      "bytes": 3885502,
+      "width_px": 4277,
+      "height_px": 1881
+    },
+    {
+      "group": "deformation",
+      "output": "results/all_images/deformation__fig_13_full_area_geobc_cumulative_deformation_buildings.png",
+      "source": "results/images/full_area_geobc_ps/defo/fig_13_full_area_geobc_cumulative_deformation_buildings.png",
+      "sha256": "ceaef5912976b29cc3cbd920d375e0ff0d44c34a116ad6714fb89710c8df4c65",
+      "bytes": 2057722,
+      "width_px": 2404,
+      "height_px": 1764
+    },
+    {
+      "group": "deformation",
+      "output": "results/all_images/deformation__fig_14_full_area_lutan_cumulative_deformation_buildings.png",
+      "source": "results/images/full_area_geobc_ps/defo/fig_14_full_area_lutan_cumulative_deformation_buildings.png",
+      "sha256": "56c0ff98e936bd1cdd5f0a88b47daa06c6e9d9c961e4ab3753f4dad1f249456c",
+      "bytes": 2570443,
+      "width_px": 2404,
+      "height_px": 1764
+    },
+    {
+      "group": "deformation",
+      "output": "results/all_images/deformation__fig_15_full_area_geobc_vs_lutan_cumulative_deformation_buildings.png",
+      "source": "results/images/full_area_geobc_ps/defo/fig_15_full_area_geobc_vs_lutan_cumulative_deformation_buildings.png",
+      "sha256": "3580e127db5b10bac5dc7ec6c642fc1db4824082e98ff75451c3a20e8e0b7c72",
+      "bytes": 4313476,
+      "width_px": 4277,
+      "height_px": 1881
+    },
+    {
+      "group": "3d",
+      "output": "results/all_images/3d__fig_09_lutan_full_area_geobc_3d.png",
+      "source": "results/pic_all/fig_09_lutan_full_area_geobc_3d.png",
+      "sha256": "36a4ba7588a189f134e68f6f4bf97fdde45550d08c4740299f614b87116a6767",
+      "bytes": 3413488,
+      "width_px": 3045,
+      "height_px": 2372
+    },
+    {
+      "group": "3d",
+      "output": "results/all_images/3d__fig_10_lutan_planar_geobc_3d_extent.png",
+      "source": "results/pic_all/fig_10_lutan_planar_geobc_3d_extent.png",
+      "sha256": "81885260a923e1299d40f4edcd597860eb8d0d0a95c5887ca6618080a4eed202",
+      "bytes": 2068729,
+      "width_px": 2543,
+      "height_px": 2426
+    },
+    {
+      "group": "3d",
+      "output": "results/all_images/3d__fig_11_lutan_hotspot_3d_zoom.png",
+      "source": "results/pic_all/fig_11_lutan_hotspot_3d_zoom.png",
+      "sha256": "8d12bb55fb62763805763970d366747309a28461ae8249c2a1fbfdc3dc46899f",
+      "bytes": 1480364,
+      "width_px": 2646,
+      "height_px": 2158
+    },
+    {
+      "group": "3d",
+      "output": "results/all_images/3d__fig_12_lutan_interpolated_building_surfaces_3d.png",
+      "source": "results/pic_all/fig_12_lutan_interpolated_building_surfaces_3d.png",
+      "sha256": "0ed9469b20d494a78fd8bc9d9b548887de5031624aa62437910b7fe809fb872b",
+      "bytes": 2107341,
+      "width_px": 3045,
+      "height_px": 2319
+    }
+  ]
+}
